@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kinderfeestjes – Silsplace</title>
+  <meta name="description" content="Gezellige kinderfeestjes in Tilburg en Moergestel. Taarten, bonbons, creatief knutselen en meer! Vanaf 8 kindjes." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script defer src="https://analytics.code-lieshout.nl/script.js" data-website-id="8aaaf667-b800-446d-b29a-887f687d537a"></script>
+  <style>
+    body { font-family: 'Nunito', sans-serif; background-color: #FFF9FB; }
+    h1, h2, h3, h4 { font-family: 'Fredoka', sans-serif; }
+    .clay-card { border-radius: 20px; border: 3px solid rgba(244,114,182,0.2); box-shadow: 4px 4px 8px rgba(244,114,182,0.15), inset -2px -2px 8px rgba(255,255,255,0.6); background: white; transition: transform 200ms ease-out; }
+    .clay-card:hover { transform: translateY(-4px); }
+    .clay-btn { border-radius: 16px; box-shadow: 4px 4px 8px rgba(244,114,182,0.25); transition: transform 200ms ease-out; }
+    .clay-btn:hover { transform: translateY(-2px); }
+    #mobile-menu { display: none; }
+    #mobile-menu.open { display: flex; }
+  </style>
+</head>
+<body>
+  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b-2 border-pink-100 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="cursor-pointer"><img src="images/logo.jpg" alt="Silsplace" class="h-12 w-auto rounded-xl" /></a>
+      <div class="hidden md:flex items-center gap-6 font-semibold text-gray-700">
+        <a href="workshops-tilburg.html" class="hover:text-pink-500 transition-colors cursor-pointer">Workshops Tilburg</a>
+        <a href="workshops-nijmegen.html" class="hover:text-pink-500 transition-colors cursor-pointer">Workshops Nijmegen</a>
+        <a href="kinderfeestjes.html" class="text-pink-500 cursor-pointer">Kinderfeestjes</a>
+        <a href="diy-pakketten.html" class="hover:text-pink-500 transition-colors cursor-pointer">DIY Pakketten</a>
+        <a href="over-ons.html" class="hover:text-pink-500 transition-colors cursor-pointer">Over Ons</a>
+        <a href="locaties.html" class="hover:text-pink-500 transition-colors cursor-pointer">Locaties</a>
+        <a href="contact.html" class="clay-btn bg-gradient-to-r from-pink-400 to-pink-500 text-white px-5 py-2 cursor-pointer">Contact</a>
+      </div>
+      <button onclick="document.getElementById('mobile-menu').classList.toggle('open')" class="md:hidden cursor-pointer p-2 rounded-xl hover:bg-pink-50">
+        <svg class="w-6 h-6 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="md:hidden flex-col bg-white border-t border-pink-100 px-4 pb-4 gap-3">
+      <a href="workshops-tilburg.html" class="block py-2 text-gray-700 hover:text-pink-500 cursor-pointer">Workshops Tilburg</a>
+      <a href="workshops-nijmegen.html" class="block py-2 text-gray-700 hover:text-pink-500 cursor-pointer">Workshops Nijmegen</a>
+      <a href="kinderfeestjes.html" class="block py-2 text-pink-500 cursor-pointer">Kinderfeestjes</a>
+      <a href="contact.html" class="block mt-2 clay-btn bg-gradient-to-r from-pink-400 to-pink-500 text-white px-5 py-2 text-center cursor-pointer">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="py-20 px-4 bg-gradient-to-br from-pink-50 to-green-50 text-center">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-6xl mb-6">🎉</div>
+      <h1 class="text-5xl font-bold text-gray-800 mb-6">Kinderfeestjes</h1>
+      <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+        Op zoek naar een gezellig en te gek kinderfeest in de regio Tilburg? Wij organiseren creatieve, knutsel-, taarten- en chocolade kinderfeestjes die de kinderen nooit vergeten!
+      </p>
+      <div class="flex flex-wrap gap-3 justify-center text-sm font-semibold">
+        <span class="bg-pink-100 text-pink-700 px-4 py-2 rounded-full">✓ Vanaf 8 kinderen</span>
+        <span class="bg-green-100 text-green-700 px-4 py-2 rounded-full">✓ Locatie Moergestel</span>
+        <span class="bg-pink-100 text-pink-700 px-4 py-2 rounded-full">✓ Ook bij je thuis</span>
+        <span class="bg-green-100 text-green-700 px-4 py-2 rounded-full">✓ Alles inclusief</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEESTJES OVERZICHT -->
+  <section class="py-16 px-4">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-gray-800 mb-10 text-center">Kies het perfecte feestje!</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <div class="clay-card overflow-hidden cursor-pointer" onclick="location.href='contact.html'">
+          <img src="images/img12.png" alt="Taart feestje kinderen" class="w-full h-44 object-cover" />
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Taart Maken</h3>
+            <p class="text-gray-600 text-sm">De kinderen gaan een taart bakken en versieren. Superleuk en lekker!</p>
+          </div>
+        </div>
+
+        <div class="clay-card overflow-hidden cursor-pointer" onclick="location.href='contact.html'">
+          <img src="images/img15.png" alt="Bonbons kinderfeestje" class="w-full h-44 object-cover" />
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Chocolade Bonbons</h3>
+            <p class="text-gray-600 text-sm">Zelf chocolade bonbons maken en versieren. Heerlijk en ontzettend leuk!</p>
+          </div>
+        </div>
+
+        <div class="clay-card overflow-hidden cursor-pointer" onclick="location.href='contact.html'">
+          <img src="images/img16.png" alt="Ibiza tas kinderfeestje" class="w-full h-44 object-cover" />
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Stoffen Tas Pimpen</h3>
+            <p class="text-gray-600 text-sm">De kinderen versieren hun eigen stoffen tas met verf en stencils. Super tof resultaat!</p>
+          </div>
+        </div>
+
+        <div class="clay-card overflow-hidden cursor-pointer" onclick="location.href='contact.html'">
+          <img src="images/img17.png" alt="Tie-dye kinderfeestje" class="w-full h-44 object-cover" />
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Tie-Dye Tas & Shirt</h3>
+            <p class="text-gray-600 text-sm">Superpopulair: zelf tie-dye patronen maken op een tas of shirt!</p>
+          </div>
+        </div>
+
+        <div class="clay-card overflow-hidden cursor-pointer" onclick="location.href='contact.html'">
+          <img src="images/img18.png" alt="Bordje schilderen kinderfeestje" class="w-full h-44 object-cover" />
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Bordje Schilderen</h3>
+            <p class="text-gray-600 text-sm">Ieder kind schildert zijn/haar eigen bordje. Uniek en superlief als herinnering!</p>
+          </div>
+        </div>
+
+        <div class="clay-card overflow-hidden cursor-pointer" onclick="location.href='contact.html'">
+          <img src="images/img19.png" alt="Houten bordje kinderfeestje" class="w-full h-44 object-cover" />
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Houten Bordjes</h3>
+            <p class="text-gray-600 text-sm">Kinderen versieren een houten bordje met allerlei leuke technieken!</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATIES -->
+  <section class="py-16 px-4 bg-gradient-to-br from-pink-50 to-green-50">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-4xl font-bold text-gray-800 mb-8 text-center">Waar kan het feestje plaatsvinden?</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="clay-card p-6">
+          <div class="text-4xl mb-3">📍</div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Onze locatie in Moergestel</h3>
+          <p class="text-gray-600 text-sm">Je kunt hier gratis parkeren. Helemaal vooraan in Moergestel, tegen Tilburg-Zuid aan.</p>
+        </div>
+        <div class="clay-card p-6">
+          <div class="text-4xl mb-3">🏠</div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Bij jou thuis</h3>
+          <p class="text-gray-600 text-sm">Binnen een straal van 40 km rondom Tilburg/Moergestel. Meerprijs €0,29 per km. Zorg zelf voor ranja, wij nemen wat lekkers mee!</p>
+        </div>
+      </div>
+      <div class="clay-card p-6 mt-6 bg-pink-50 text-center">
+        <p class="text-gray-700 font-semibold">Woon je verder weg?</p>
+        <p class="text-gray-600 text-sm mt-2">Bestel dan een super tof <strong>DIY Kids Pakket</strong> — compleet met alle materialen en een duidelijke instructie!</p>
+        <a href="diy-pakketten.html" class="clay-btn bg-gradient-to-r from-pink-400 to-pink-500 text-white px-6 py-2 font-semibold cursor-pointer inline-block mt-4 text-sm">Bekijk DIY Pakketten</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRAKTISCH -->
+  <section class="py-16 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl font-bold text-gray-800 mb-8">Handig om te weten</h2>
+      <div class="grid md:grid-cols-3 gap-6 text-left">
+        <div class="clay-card p-6">
+          <div class="text-3xl mb-3">👧</div>
+          <h4 class="font-bold text-gray-800 mb-2">Minimaal 8 kindjes</h4>
+          <p class="text-sm text-gray-600">Ben je met minder kindjes? Je bent van harte welkom maar betaalt toch voor 8.</p>
+        </div>
+        <div class="clay-card p-6">
+          <div class="text-3xl mb-3">📦</div>
+          <h4 class="font-bold text-gray-800 mb-2">Alles inclusief</h4>
+          <p class="text-sm text-gray-600">Alle materialen zijn inbegrepen. Wij zorgen voor een onvergetelijk feestje!</p>
+        </div>
+        <div class="clay-card p-6">
+          <div class="text-3xl mb-3">📅</div>
+          <h4 class="font-bold text-gray-800 mb-2">Flexibel plannen</h4>
+          <p class="text-sm text-gray-600">7 dagen per week beschikbaar op een tijdstip dat voor jullie uitkomt.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 px-4 bg-gradient-to-r from-pink-400 to-pink-600 text-white text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-4xl font-bold mb-4">Plan het feestje!</h2>
+      <p class="text-xl opacity-90 mb-8">Stuur ons een berichtje en we plannen het leukste feestje ooit voor jouw kind!</p>
+      <a href="contact.html" class="clay-btn bg-white text-pink-500 px-10 py-4 text-xl font-bold cursor-pointer inline-block">Neem contact op</a>
+    </div>
+  </section>
+
+  <footer class="bg-gray-800 text-white py-12 px-4">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-8">
+      <div><img src="images/logo.jpg" alt="Silsplace" class="h-12 w-auto rounded-xl mb-4" /><p class="text-gray-400 text-sm">Workshops in Tilburg, Moergestel & Nijmegen.</p></div>
+      <div><h4 class="font-bold text-pink-400 mb-4" style="font-family: Fredoka, sans-serif;">Workshops</h4><ul class="space-y-2 text-gray-400 text-sm"><li><a href="workshops-tilburg.html" class="hover:text-pink-300 cursor-pointer">Tilburg & Moergestel</a></li><li><a href="workshops-nijmegen.html" class="hover:text-pink-300 cursor-pointer">Nijmegen</a></li><li><a href="kinderfeestjes.html" class="hover:text-pink-300 cursor-pointer">Kinderfeestjes</a></li><li><a href="diy-pakketten.html" class="hover:text-pink-300 cursor-pointer">DIY Pakketten</a></li></ul></div>
+      <div><h4 class="font-bold text-green-400 mb-4" style="font-family: Fredoka, sans-serif;">Info</h4><ul class="space-y-2 text-gray-400 text-sm"><li><a href="over-ons.html" class="hover:text-green-300 cursor-pointer">Over Ons</a></li><li><a href="locaties.html" class="hover:text-green-300 cursor-pointer">Locaties</a></li><li><a href="contact.html" class="hover:text-green-300 cursor-pointer">Contact</a></li></ul></div>
+      <div><h4 class="font-bold text-pink-400 mb-4" style="font-family: Fredoka, sans-serif;">Contact</h4><a href="contact.html" class="clay-btn bg-gradient-to-r from-pink-400 to-pink-500 text-white px-5 py-2 text-sm font-semibold cursor-pointer inline-block">Stuur een berichtje</a></div>
+    </div>
+    <div class="max-w-6xl mx-auto border-t border-gray-700 mt-8 pt-8 text-center text-gray-500 text-sm">
+      © 2025 Silsplace · Gebouwd door <a href="https://www.code-lieshout.nl" class="text-pink-400 hover:text-pink-300 cursor-pointer">Code Lieshout</a>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workshops Nijmegen – Silsplace</title>
+  <meta name="description" content="Gezellige workshops in Nijmegen. Taarten, bonbons en creatieve workshops voor vrijgezellenfeest, vriendinnendag of teamuitje!" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script defer src="https://analytics.code-lieshout.nl/script.js" data-website-id="8aaaf667-b800-446d-b29a-887f687d537a"></script>
+  <style>
+    body { font-family: 'Nunito', sans-serif; background-color: #FFF9FB; }
+    h1, h2, h3, h4 { font-family: 'Fredoka', sans-serif; }
+    .clay-card { border-radius: 20px; border: 3px solid rgba(244,114,182,0.2); box-shadow: 4px 4px 8px rgba(244,114,182,0.15), inset -2px -2px 8px rgba(255,255,255,0.6); background: white; transition: transform 200ms ease-out, box-shadow 200ms ease-out; }
+    .clay-card:hover { transform: translateY(-4px); }
+    .clay-btn { border-radius: 16px; box-shadow: 4px 4px 8px rgba(244,114,182,0.25); transition: transform 200ms ease-out; }
+    .clay-btn:hover { transform: translateY(-2px); }
+    #mobile-menu { display: none; }
+    #mobile-menu.open { display: flex; }
+  </style>
+</head>
+<body>
+  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b-2 border-pink-100 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="cursor-pointer"><img src="images/logo.jpg" alt="Silsplace" class="h-12 w-auto rounded-xl" /></a>
+      <div class="hidden md:flex items-center gap-6 font-semibold text-gray-700">
+        <a href="workshops-tilburg.html" class="hover:text-pink-500 transition-colors cursor-pointer">Workshops Tilburg</a>
+        <a href="workshops-nijmegen.html" class="text-pink-500 cursor-pointer">Workshops Nijmegen</a>
+        <a href="kinderfeestjes.html" class="hover:text-pink-500 transition-colors cursor-pointer">Kinderfeestjes</a>
+        <a href="diy-pakketten.html" class="hover:text-pink-500 transition-colors cursor-pointer">DIY Pakketten</a>
+        <a href="over-ons.html" class="hover:text-pink-500 transition-colors cursor-pointer">Over Ons</a>
+        <a href="locaties.html" class="hover:text-pink-500 transition-colors cursor-pointer">Locaties</a>
+        <a href="contact.html" class="clay-btn bg-gradient-to-r from-pink-400 to-pink-500 text-white px-5 py-2 cursor-pointer">Contact</a>
+      </div>
+      <button onclick="document.getElementById('mobile-menu').classList.toggle('open')" class="md:hidden cursor-pointer p-2 rounded-xl hover:bg-pink-50">
+        <svg class="w-6 h-6 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="md:hidden flex-col bg-white border-t border-pink-100 px-4 pb-4 gap-3">
+      <a href="workshops-tilburg.html" class="block py-2 text-gray-700 hover:text-pink-500 cursor-pointer">Workshops Tilburg</a>
+      <a href="workshops-nijmegen.html" class="block py-2 text-pink-500 cursor-pointer">Workshops Nijmegen</a>
+      <a href="kinderfeestjes.html" class="block py-2 text-gray-700 hover:text-pink-500 cursor-pointer">Kinderfeestjes</a>
+      <a href="contact.html" class="block mt-2 clay-btn bg-gradient-to-r from-pink-400 to-pink-500 text-white px-5 py-2 text-center cursor-pointer">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="py-20 px-4 bg-gradient-to-br from-green-50 to-white text-center">
+    <div class="max-w-4xl mx-auto">
+      <div class="inline-block bg-green-100 text-green-600 px-4 py-2 rounded-full text-sm font-semibold mb-6">Nijmegen & Lent</div>
+      <h1 class="text-5xl font-bold text-gray-800 mb-6">Workshops Nijmegen</h1>
+      <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+        Creatieve en culinaire workshops vlak bij het centrum van Nijmegen. Fantastisch voor vrijgezellenfeesten, personeelsuitjes en vriendinnenuitjes!
+      </p>
+      <div class="flex flex-wrap gap-3 justify-center text-sm font-semibold">
+        <span class="bg-green-100 text-green-700 px-4 py-2 rounded-full">✓ Incl. consumpties</span>
+        <span class="bg-pink-100 text-pink-700 px-4 py-2 rounded-full">✓ Vanaf 12 personen</span>
+        <span class="bg-green-100 text-green-700 px-4 py-2 rounded-full">✓ Nabij centrum</span>
+        <span class="bg-pink-100 text-pink-700 px-4 py-2 rounded-full">✓ Eigen groep</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOTO GALERIJ -->
+  <section class="py-12 px-4">
+    <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
+      <img src="images/nijmegen1.png" alt="Workshops Nijmegen" class="rounded-2xl w-full h-40 object-cover hover:scale-105 transition-transform cursor-pointer" />
+      <img src="images/nijmegen2.png" alt="Workshops Nijmegen" class="rounded-2xl w-full h-40 object-cover hover:scale-105 transition-transform cursor-pointer" />
+      <img src="images/nijmegen3.png" alt="Workshops Nijmegen" class="rounded-2xl w-full h-40 object-cover hover:scale-105 transition-transform cursor-pointer" />
+      <img src="images/nijmegen4.png" alt="Workshops Nijmegen" class="rounded-2xl w-full h-40 object-cover hover:scale-105 transition-transform cursor-pointer" />
+      <img src="images/nijmegen5.png" alt="Workshops Nijmegen" class="rounded-2xl w-full h-40 object-cover hover:scale-105 transition-transform cursor-pointer" />
+      <img src="images/nijmegen6.png" alt="Workshops Nijmegen" class="rounded-2xl w-full h-40 object-cover hover:scale-105 transition-transform cursor-pointer" />
+      <img src="images/nijmegen7.png" alt="Workshops Nijmegen" class="rounded-2xl w-full h-40 object-cover hover:scale-105 transition-transform cursor-pointer" />
+      <img src="images/nijmegen8.png" alt="Workshops Nijmegen" class="rounded-2xl w-full h-40 object-cover hover:scale-105 transition-transform cursor-pointer" />
+    </div>
+  </section>
+
+  <!-- WORKSHOPS IN NIJMEGEN -->
+  <section class="py-16 px-4">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-gray-800 mb-4 text-center">Ons aanbod in Nijmegen</h2>
+      <p class="text-center text-gray-500 mb-10">De workshops in Nijmegen zijn mogelijk vanaf 12 personen.</p>
+      <div class="grid md:grid-cols-2 gap-8">
+
+        <div class="clay-card p-8">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center">
+              <span class="text-2xl">🎂</span>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800">Taarten & Cupcake Workshops</h3>
+          </div>
+          <p class="text-gray-600 mb-4">Versier je eigen taart of cupcakes met fondant, botercrème en allerlei decoraties. Je gaat naar huis met een prachtig zelfgemaakt kunstwerk!</p>
+          <a href="contact.html" class="clay-btn bg-gradient-to-r from-pink-400 to-pink-500 text-white px-6 py-2 font-semibold cursor-pointer inline-block text-sm">Vraag prijs aan</a>
+        </div>
+
+        <div class="clay-card p-8">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+              <span class="text-2xl">🍫</span>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800">Bonbon Workshops</h3>
+          </div>
+          <p class="text-gray-600 mb-4">Maak prachtige bonbons met allerlei vullingen. Daarna mooi decoreren en een doosje mee naar huis!</p>
+          <a href="contact.html" class="clay-btn bg-gradient-to-r from-pink-400 to-pink-500 text-white px-6 py-2 font-semibold cursor-pointer inline-block text-sm">Vraag prijs aan</a>
+        </div>
+
+        <div class="clay-card p-8">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center">
+              <span class="text-2xl">👜</span>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800">Creatieve Workshops</h3>
+          </div>
+          <p class="text-gray-600 mb-4">Ibiza tassen, memoborden, zeepkettingen, etagères, sieraden, mozaieken en meer! Je gaat altijd met iets leuks naar huis.</p>
+          <a href="contact.html" class="clay-btn bg-gradient-to-r from-green-400 to-green-500 text-white px-6 py-2 font-semibold cursor-pointer inline-block text-sm">Vraag prijs aan</a>
+        </div>
+
+        <div class="clay-card p-8">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+              <span class="text-2xl">💐</span>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800">Seizoens Workshops</h3>
+          </div>
+          <p class="text-gray-600 mb-4">Droogbloemen kransen, kerst workshops, paas workshops en meer seizoensgebonden activiteiten!</p>
+          <a href="contact.html" class="clay-btn bg-gradient-to-r from-green-400 to-green-500 text-white px-6 py-2 font-semibold cursor-pointer inline-block text-sm">Vraag prijs aan</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PLUSPUNTEN NIJMEGEN -->
+  <section class="py-16 px-4 bg-gradient-to-br from-green-50 to-pink-50">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-4xl font-bold text-gray-800 mb-8 text-center">Pluspunten in Nijmegen</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="flex items-start gap-4">
+          <div class="w-8 h-8 bg-green-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-800">Inclusief consumpties</h4>
+            <p class="text-gray-600 text-sm">Prijs is inclusief onbeperkt consumpties & etagère met lekkers</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="w-8 h-8 bg-pink-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-800">Altijd je eigen groep</h4>
+            <p class="text-gray-600 text-sm">Minimaal 12 personen — je bent altijd met je eigen gezelschap</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="w-8 h-8 bg-green-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-800">Nabij het centrum</h4>
+            <p class="text-gray-600 text-sm">1,8 km van centrum Nijmegen, ideaal om na afloop nog wat te drinken</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="w-8 h-8 bg-pink-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-800">Kleinigheidje voor speciale gelegenheden</h4>
+            <p class="text-gray-600 text-sm">Voor de vrijgezel, jubilaris of jarige hebben we altijd een verrassing!</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="w-8 h-8 bg-green-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-800">Externe locatie mogelijk</h4>
+            <p class="text-gray-600 text-sm">We komen ook naar jullie eigen locatie toe — we nemen alle materialen mee!</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="w-8 h-8 bg-pink-400 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-800">Grote groepen welkom</h4>
+            <p class="text-gray-600 text-sm">Tot 200 personen draaien we onze hand niet om!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 px-4 text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-4xl font-bold text-gray-800 mb-4">Klaar om te boeken?</h2>
+      <p class="text-xl text-gray-600 mb-8">Stuur ons een berichtje en we vertellen je alles over de mogelijkheden in Nijmegen!</p>
+      <a href="contact.html" class="clay-btn bg-gradient-to-r from-pink-400 to-pink-500 text-white px-10 py-5 text-xl font-bold cursor-pointer inline-block">Neem contact op</a>
+    </div>
+  </section>
+
+  <footer class="bg-gray-800 text-white py-12 px-4">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-8">
+      <div><img src="images/logo.jpg" alt="Silsplace" class="h-12 w-auto rounded-xl mb-4" /><p class="text-gray-400 text-sm">Workshops in Tilburg, Moergestel & Nijmegen.</p></div>
+      <div><h4 class="font-bold text-pink-400 mb-4" style="font-family: Fredoka, sans-serif;">Workshops</h4><ul class="space-y-2 text-gray-400 text-sm"><li><a href="workshops-tilburg.html" class="hover:text-pink-300 cursor-pointer">Tilburg & Moergestel</a></li><li><a href="workshops-nijmegen.html" class="hover:text-pink-300 cursor-pointer">Nijmegen</a></li><li><a href="kinderfeestjes.html" class="hover:text-pink-300 cursor-pointer">Kinderfeestjes</a></li><li><a href="diy-pakketten.html" class="hover:text-pink-300 cursor-pointer">DIY Pakketten</a></li></ul></div>
+      <div><h4 class="font-bold text-green-400 mb-4" style="font-family: Fredoka, sans-serif;">Info</h4><ul class="space-y-2 text-gray-400 text-sm"><li><a href="over-ons.html" class="hover:text-green-300 cursor-pointer">Over Ons</a></li><li><a href="locaties.html" class="hover:text-green-300 cursor-pointer">Locaties</a></li><li><a href="contact.html" class="hover:text-green-300 cursor-pointer">Contact</a></li></ul></div>
+      <div><h4 class="font-bold text-pink-400 mb-4" style="font-family: Fredoka, sans-serif;">Contact</h4><p class="text-gray-400 text-sm mb-4">7 dagen per week beschikbaar</p><a href="contact.html" class="clay-btn bg-gradient-to-r from-pink-400 to-pink-500 text-white px-5 py-2 text-sm font-semibold cursor-pointer inline-block">Stuur een berichtje</a></div>
+    </div>
+    <div class="max-w-6xl mx-auto border-t border-gray-700 mt-8 pt-8 text-center text-gray-500 text-sm">
+      © 2025 Silsplace · Gebouwd door <a href="https://www.code-lieshout.nl" class="text-pink-400 hover:text-pink-300 cursor-pointer">Code Lieshout</a>
+    </div>
+  </footer>
+</body>
+</html>

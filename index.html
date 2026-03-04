@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Silsplace – Workshops in Tilburg, Moergestel & Nijmegen</title>
+  <meta name="description" content="Gezellige workshops in Tilburg, Moergestel en Nijmegen. Taarten, bonbons, high tea, sushi, creatieve workshops en kinderfeestjes. Voor vrijgezellenfeest, vriendinnendag of teamuitje!" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            roze: '#F472B6',
+            'roze-licht': '#FDF2F8',
+            'roze-donker': '#DB2777',
+            groen: '#4ADE80',
+            'groen-licht': '#F0FDF4',
+            'groen-donker': '#16A34A',
+            creme: '#FFF9FB',
+          },
+          fontFamily: {
+            heading: ['Fredoka', 'sans-serif'],
+            body: ['Nunito', 'sans-serif'],
+          },
+          borderRadius: {
+            clay: '20px',
+            'clay-lg': '28px',
+          },
+          boxShadow: {
+            clay: '4px 4px 8px rgba(244,114,182,0.25), inset -2px -2px 8px rgba(244,114,182,0.15)',
+            'clay-green': '4px 4px 8px rgba(74,222,128,0.25), inset -2px -2px 8px rgba(74,222,128,0.15)',
+            'clay-white': '4px 4px 12px rgba(0,0,0,0.1), inset -2px -2px 6px rgba(255,255,255,0.8)',
+          },
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script defer src="https://analytics.code-lieshout.nl/script.js" data-website-id="8aaaf667-b800-446d-b29a-887f687d537a"></script>
+  <style>
+    body { font-family: 'Nunito', sans-serif; background-color: #FFF9FB; }
+    h1, h2, h3, h4 { font-family: 'Fredoka', sans-serif; }
+    .clay-card {
+      border-radius: 20px;
+      border: 3px solid rgba(244,114,182,0.25);
+      box-shadow: 4px 4px 8px rgba(244,114,182,0.2), inset -2px -2px 8px rgba(255,255,255,0.6);
+      background: white;
+      transition: transform 200ms ease-out, box-shadow 200ms ease-out;
+    }
+    .clay-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 6px 8px 16px rgba(244,114,182,0.3), inset -2px -2px 8px rgba(255,255,255,0.8);
+    }
+    .clay-btn {
+      border-radius: 16px;
+      border: 3px solid transparent;
+      box-shadow: 4px 4px 8px rgba(244,114,182,0.3), inset -2px -2px 6px rgba(255,255,255,0.4);
+      transition: transform 200ms ease-out, box-shadow 200ms ease-out;
+    }
+    .clay-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 4px 6px 12px rgba(244,114,182,0.4);
+    }
+    .clay-btn:active {
+      transform: translateY(0px) scale(0.98);
+    }
+    .blob-bg {
+      background: radial-gradient(ellipse at 20% 50%, #FDF2F8 0%, transparent 60%),
+                  radial-gradient(ellipse at 80% 20%, #F0FDF4 0%, transparent 60%),
+                  #FFF9FB;
+    }
+    .rounded-photo {
+      border-radius: 50%;
+      border: 4px solid white;
+      box-shadow: 4px 4px 12px rgba(244,114,182,0.3);
+      overflow: hidden;
+      object-fit: cover;
+    }
+    .hero-blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.4;
+      pointer-events: none;
+    }
+    /* Lightbox */
+    #lightbox {
+      display: none;
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,0.8);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+    }
+    #lightbox.open { display: flex; }
+    #lightbox img { max-width: 90vw; max-height: 90vh; border-radius: 20px; }
+    /* Mobile menu */
+    #mobile-menu { display: none; }
+    #mobile-menu.open { display: flex; }
+    @media (prefers-reduced-motion: reduce) {
+      .clay-card, .clay-btn { transition: none; }
+    }
+  </style>
+</head>
+<body class="blob-bg">
+
+  <!-- NAV -->
+  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b-2 border-pink-100 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 cursor-pointer">
+        <img src="images/logo.jpg" alt="Silsplace logo" class="h-12 w-auto rounded-xl" />
+      </a>
+      <!-- Desktop nav -->
+      <div class="hidden md:flex items-center gap-6 font-body font-600 text-gray-700">
+        <a href="workshops-tilburg.html" class="hover:text-pink-500 transition-colors duration-200 cursor-pointer">Workshops Tilburg</a>
+        <a href="workshops-nijmegen.html" class="hover:text-pink-500 transition-colors duration-200 cursor-pointer">Workshops Nijmegen</a>
+        <a href="kinderfeestjes.html" class="hover:text-pink-500 transition-colors duration-200 cursor-pointer">Kinderfeestjes</a>
+        <a href="diy-pakketten.html" class="hover:text-pink-500 transition-colors duration-200 cursor-pointer">DIY Pakketten</a>
+        <a href="over-ons.html" class="hover:text-pink-500 transition-colors duration-200 cursor-pointer">Over Ons</a>
+        <a href="locaties.html" class="hover:text-pink-500 transition-colors duration-200 cursor-pointer">Locaties</a>
+        <a href="contact.html" class="clay-btn bg-gradient-to-r from-pink-400 to-pink-500 text-white px-5 py-2 font-semibold cursor-pointer">Contact</a>
+      </div>
+      <!-- Hamburger -->
+      <button id="hamburger" onclick="toggleMenu()" class="md:hidden cursor-pointer p-2 rounded-clay hover:bg-pink-50 transition-colors" aria-label="Menu openen">
+        <svg class="w-6 h-6 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden flex-col bg-white border-t border-pink-100 px-4 pb-4 gap-3 font-body font-600">
+      <a href="workshops-tilburg.html" class="block py-2 text-gray-700 hover:text-pink-500 cursor-pointer">Workshops Tilburg</a>
+      <a href="workshops-nijmegen.html" class="block py-2 text-gray-700 hover:text-pink-500 cursor-pointer">Workshops Nijmegen</a>
+      <a href="kinderfeestjes.html" class="block py-2 text-gray-700 hover:text-pink-500 cursor-pointer">Kinderfeestjes</a>
+      <a href="diy-pakketten.html" class="block py-2 text-gray-700 hover:text-pink-500 cursor-pointer">DIY Pakketten</a>
+      <a href="over-ons.html" class="block py-2 text-gray-700 hover:text-pink-500 cursor-pointer">Over Ons</a>
+      <a href="locaties.html" class="block py-2 text-gray-700 hover:text-pink-500 cursor-pointer">Locaties</a>
+      <a href="contact.html" class="block mt-2 clay-btn bg-gradient-to-r from-pink-400 to-pink-500 text-white px-5 py-2 text-center font-semibold cursor-pointer">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="relative min-h-screen flex items-center overflow-hidden px-4 py-20">
+    <!-- Decorative blobs -->
+    <div class="hero-blob w-96 h-96 bg-pink-300 -top-20 -left-20"></div>
+    <div class="hero-blob w-80 h-80 bg-green-200 top-1/2 -right-20"></div>
+    <div class="hero-blob w-64 h-64 bg-pink-200 bottom-0 left-1/3"></div>
+
+    <div class="max-w-6xl mx-auto w-full relative z-10">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="inline-block bg-pink-100 text-pink-600 px-4 py-2 rounded-full text-sm font-semibold mb-6 border-2 border-pink-200">
+            🎉 Gezellig samen creatief bezig!
+          </div>
+          <h1 class="text-5xl md:text-6xl font-bold text-gray-800 leading-tight mb-6" style="font-family: Fredoka, sans-serif;">
+            Jouw leukste<br/>
+            <span class="text-pink-500">workshop</span><br/>
+            ervaring ooit!
+          </h1>
+          <p class="text-xl text-gray-600 mb-8 leading-relaxed font-body">
+            Van taarten & bonbons tot sushi en creatieve kunst — wij organiseren gezellige workshops in Tilburg, Moergestel en Nijmegen. Voor vrijgezellenfeesten, vriendinnenuitjes, personeelsuitjes en kinderfeestjes!
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="workshops-tilburg.html" class="clay-btn bg-gradient-to-r from-pink-400 to-pink-500 text-white px-8 py-4 text-lg font-bold cursor-pointer">
+              Workshops bekijken
+            </a>
+            <a href="contact.html" class="clay-btn bg-white text-pink-500 px-8 py-4 text-lg font-bold border-3 border-pink-200 cursor-pointer">
+              Boek een workshop
+            </a>
+          </div>
+          <div class="flex items-center gap-6 mt-8">
+            <div class="text-center">
+              <div class="text-3xl font-bold text-pink-500" style="font-family: Fredoka, sans-serif;">2006</div>
+              <div class="text-sm text-gray-500">Gestart</div>
+            </div>
+            <div class="w-px h-12 bg-pink-200"></div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-green-500" style="font-family: Fredoka, sans-serif;">3</div>
+              <div class="text-sm text-gray-500">Locaties</div>
+            </div>
+            <div class="w-px h-12 bg-pink-200"></div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-pink-500" style="font-family: Fredoka, sans-serif;">200+</div>
+              <div class="text-sm text-gray-500">Personen</div>
+            </div>
+          </div>
+        </div>
+        <!-- Round photo collage -->
+        <div class="relative flex items-center justify-center h-96 md:h-auto">
+          <div class="relative w-full max-w-md">
+            <img src="images/nijmegen1.png" alt="Workshop groep" class="rounded-photo w-64 h-64 mx-auto" style="border-radius:50%; object-fit:cover; width:260px; height:260px;" />
+            <img src="images/groep1.jpg" alt="Workshop deelnemers" class="absolute top-0 left-0 rounded-photo" style="border-radius:50%; object-fit:cover; width:120px; height:120px; border: 4px solid white; box-shadow: 4px 4px 12px rgba(244,114,182,0.3);" />
+            <img src="images/nijmegen3.png" alt="Creatieve workshop" class="absolute bottom-4 right-4 rounded-photo" style="border-radius:50%; object-fit:cover; width:110px; height:110px; border: 4px solid white; box-shadow: 4px 4px 12px rgba(74,222,128,0.3);" />
+            <img src="images/groep2.jpg" alt="Vriendinnen workshop" class="absolute top-1/2 -right-4 rounded-photo" style="border-radius:50%; object-fit:cover; width:90px; height:90px; border: 4px solid white; box-shadow: 4px 4px 12px rgba(244,114,182,0.3); transform: translateY(-50%);" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VOOR WIE -->
+  <section class="py-16 px-4">
+    <div class="max-w-6xl mx-auto text-center mb-12">
+      <h2 class="text-4xl font-bold text-gray-800 mb-4">Perfect voor elk uitje</h2>
+      <p class="text-lg text-gray-500">Van klein tot groot, van zoet tot creatief — wij verzorgen het!</p>
+    </div>
+    <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="clay-card p-6 text-center">
+        <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+        </div>
+        <h3 class="font-bold text-gray-800 text-lg">Vrijgezellenfeest</h3>
+        <p class="text-gray-500 text-sm mt-2">Onvergetelijk uitje voor de bruid</p>
+      </div>
+      <div class="clay-card p-6 text-center">
+        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+        </div>
+        <h3 class="font-bold text-gray-800 text-lg">Personeelsuitje</h3>
+        <p class="text-gray-500 text-sm mt-2">Team bonding op een leuke manier</p>
+      </div>
+      <div class="clay-card p-6 text-center">
+        <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h3 class="font-bold text-gray-800 text-lg">Vriendinnendag</h3>
+        <p class="text-gray-500 text-sm mt-2">Gezellig samen iets creatiefs doen</p>
+      </div>
+      <div class="clay-card p-6 text-center">
+        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 010 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/></svg>
+        </div>
+        <h3 class="font-bold text-gray-800 text-lg">Babyshower</h3>
+        <p class="text-gray-500 text-sm mt-2">Feestelijk uitje voor de aanstaande mama</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKSHOPS OVERZICHT -->
+  <section class="py-16 px-4 bg-gradient-to-br from-pink-50 to-green-50">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-gray-800 mb-4">Onze workshops</h2>
+        <p class="text-lg text-gray-500">Voor elk wat wils — kies je favoriete workshop!</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <!-- Taarten & Bonbons -->
+        <div class="clay-card overflow-hidden cursor-pointer" onclick="location.href='workshops-tilburg.html'">
+          <img src="images/nijmegen5.png" alt="Taarten en bonbon workshop" class="w-full h-52 object-cover" />
+          <div class="p-6">
+            <span class="bg-pink-100 text-pink-600 px-3 py-1 rounded-full text-xs font-semibold">Populair</span>
+            <h3 class="text-2xl font-bold text-gray-800 mt-3 mb-2">Taarten & Bonbons</h3>
+            <p class="text-gray-600 text-sm mb-4">Bak en versier je eigen grote taart of maak heerlijke bonbons. Incl. alle materialen en drankjes.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-2xl font-bold text-pink-500">v.a. €37,50</span>
+              <span class="text-gray-400 text-sm">per persoon</span>
+            </div>
+            <div class="mt-2 text-sm text-gray-500">⏱ 2 – 2,5 uur</div>
+          </div>
+        </div>
+
+        <!-- High Tea & Sushi -->
+        <div class="clay-card overflow-hidden cursor-pointer" onclick="location.href='workshops-tilburg.html#koken'">
+          <img src="images/nijmegen2.png" alt="High tea en sushi workshop" class="w-full h-52 object-cover" />
+          <div class="p-6">
+            <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-xs font-semibold">Culinair</span>
+            <h3 class="text-2xl font-bold text-gray-800 mt-3 mb-2">High Tea & Sushi</h3>
+            <p class="text-gray-600 text-sm mb-4">Maak zelf een luxe high tea of leer sushi rollen. Inclusief prosecco en onbeperkt drinken.</p>
+            <div class="flex items-center justify-between">
+              <span class="text-2xl font-bold text-green-500">v.a. €49,50</span>
+              <span class="text-gray-400 text-sm">per persoon</span>
+            </div>
+            <div class="mt-2 text-sm text-gray-500">⏱ 3 uur</div>
+          </div>
+        </div>
+
+        <!-- Creatieve Workshops -->
+        <div class="clay-card overflow-hidden cursor-pointer" onclick="location.href='workshops-tilburg.html#creatief'">
+          <img src="images/nijmegen4.png" alt="Creatieve workshops" class="w-full h-52 object-cover" />
+          <div class="p-6">
+            <span class="bg-pink-100 text-pink-600 px-3 py-1 rounded-full text-xs font-semibold">Creatief</span>
+            <h3 class="text-2xl font-bold text-gray-800 mt-3 mb-2">Creatieve Workshops</h3>
+            <p class="text-gray-600 text-sm mb-4">Ibiza tassen, droogbloemen, dikke dames, wandcirkels en nog veel meer. Je gaat met iets leuks naar huis!</p>
+            <div class="flex items-center justify-between">
+              <span class="text-2xl font-bold text-pink-500">Vraag prijs aan</span>
+            </div>
+            <div class="mt-2 text-sm text-gray-500">⏱ Variabel</div>
+          </div>
+        </div>
+
+      </div>
+      <div class="text-center mt-10">
+        <a href="workshops-tilburg.html" class="clay-btn bg-gradient-to-r from-pink-400 to-pink-500 text-white px-8 py-4 text-lg font-bold cursor-pointer inline-block">Alle workshops bekijken</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIJ -->
+  <section class="py-16 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-gray-800 mb-4">Sfeerimpressie</h2>
+        <p class="text-lg text-gray-500">Kijk eens hoe gezellig het is bij ons!</p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <img src="images/nijmegen1.png" alt="Workshop sfeer" class="rounded-clay-lg cursor-pointer hover:scale-105 transition-transform duration-200 w-full h-40 object-cover" onclick="openLightbox(this.src)" />
+        <img src="images/nijmegen2.png" alt="Workshop sfeer" class="rounded-clay-lg cursor-pointer hover:scale-105 transition-transform duration-200 w-full h-40 object-cover" onclick="openLightbox(this.src)" />
+        <img src="images/nijmegen3.png" alt="Workshop sfeer" class="rounded-clay-lg cursor-pointer hover:scale-105 transition-transform duration-200 w-full h-40 object-cover" onclick="openLightbox(this.src)" />
+        <img src="images/nijmegen4.png" alt="Workshop sfeer" class="rounded-clay-lg cursor-pointer hover:scale-105 transition-transform duration-200 w-full h-40 object-cover" onclick="openLightbox(this.src)" />
+        <img src="images/nijmegen5.png" alt="Workshop sfeer" class="rounded-clay-lg cursor-pointer hover:scale-105 transition-transform duration-200 w-full h-40 object-cover" onclick="openLightbox(this.src)" />
+        <img src="images/nijmegen6.png" alt="Workshop sfeer" class="rounded-clay-lg cursor-pointer hover:scale-105 transition-transform duration-200 w-full h-40 object-cover" onclick="openLightbox(this.src)" />
+        <img src="images/groep1.jpg" alt="Groepsworkshop" class="rounded-clay-lg cursor-pointer hover:scale-105 transition-transform duration-200 w-full h-40 object-cover" onclick="openLightbox(this.src)" />
+        <img src="images/groep2.jpg" alt="Groepsworkshop" class="rounded-clay-lg cursor-pointer hover:scale-105 transition-transform duration-200 w-full h-40 object-cover" onclick="openLightbox(this.src)" />
+      </div>
+    </div>
+  </section>
+
+  <!-- PLUSPUNTEN -->
+  <section class="py-16 px-4 bg-gradient-to-r from-pink-50 to-green-50">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-gray-800 mb-4">Waarom Silsplace?</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="clay-card p-8 text-center">
+          <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Inclusief consumpties</h3>
+          <p class="text-gray-600">Bij al onze workshops onbeperkt koffie, thee, fris & jus. Plus een etagère vol met lekkers als jullie aankomen!</p>
+        </div>
+        <div class="clay-card p-8 text-center">
+          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">7 dagen per week</h3>
+          <p class="text-gray-600">Je kunt bij ons elke dag van de week een workshop boeken op een tijdstip dat voor jullie uitkomt.</p>
+        </div>
+        <div class="clay-card p-8 text-center">
+          <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Vanaf 6 personen</h3>
+          <p class="text-gray-600">Van klein groepje tot 200 personen. Ook externe locaties mogelijk. We nemen alle materialen mee!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OVER SIL -->
+  <section class="py-16 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="flex gap-4 justify-center">
+          <img src="images/nijmegen7.png" alt="Sil - eigenaar Silsplace" class="rounded-photo" style="border-radius:50%; object-fit:cover; width:200px; height:200px; border: 4px solid white; box-shadow: 4px 4px 12px rgba(244,114,182,0.3);" />
+          <img src="images/nijmegen8.png" alt="Workshop team" class="rounded-photo self-end" style="border-radius:50%; object-fit:cover; width:150px; height:150px; border: 4px solid white; box-shadow: 4px 4px 12px rgba(74,222,128,0.3);" />
+        </div>
+        <div>
+          <h2 class="text-4xl font-bold text-gray-800 mb-6">Hoi, ik ben Sil!</h2>
+          <p class="text-lg text-gray-600 mb-4 leading-relaxed">
+            In 2006 ben ik begonnen met het organiseren van workshops & kinderfeestjes in Tilburg. Omdat het al vrij snel goed liep en mijn partner uit Nijmegen kwam, heb ik de workshops uitgebreid naar Nijmegen.
+          </p>
+          <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+            Inmiddels hebben we 3 workshoplocaties en werken we met een fijn team van workshopbegeleiders. We vinden het leuk om van jullie uitje iets bijzonders te maken. Gastvrijheid staat bij ons hoog in het vaandel. Als jullie blij naar huis gaan, dan hebben wij ons werk goed gedaan!
+          </p>
+          <a href="over-ons.html" class="clay-btn bg-gradient-to-r from-green-400 to-green-500 text-white px-6 py-3 font-bold cursor-pointer inline-block">Meer over ons</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATIES CTA -->
+  <section class="py-16 px-4 bg-gradient-to-br from-pink-400 to-pink-600 text-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-6" style="font-family: Fredoka, sans-serif;">Klaar voor jullie workshop?</h2>
+      <p class="text-xl mb-4 opacity-90">Wij zijn er voor jullie in Tilburg, Moergestel & Nijmegen</p>
+      <p class="text-lg mb-8 opacity-80">Elke zaterdag inloopworkshops in Tilburg/Moergestel — ook voor als je alleen of met twee personen bent!</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="workshops-tilburg.html" class="clay-btn bg-white text-pink-500 px-8 py-4 font-bold text-lg cursor-pointer">Workshops Tilburg</a>
+        <a href="workshops-nijmegen.html" class="clay-btn bg-pink-300 text-white px-8 py-4 font-bold text-lg cursor-pointer">Workshops Nijmegen</a>
+        <a href="contact.html" class="clay-btn bg-pink-700 text-white px-8 py-4 font-bold text-lg cursor-pointer">Stuur ons een berichtje</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-800 text-white py-12 px-4">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-8">
+      <div>
+        <img src="images/logo.jpg" alt="Silsplace" class="h-12 w-auto rounded-xl mb-4" />
+        <p class="text-gray-400 text-sm">Gezellige workshops in Tilburg, Moergestel en Nijmegen. Gestart in 2006 door Sil.</p>
+      </div>
+      <div>
+        <h4 class="font-bold text-pink-400 mb-4" style="font-family: Fredoka, sans-serif;">Workshops</h4>
+        <ul class="space-y-2 text-gray-400 text-sm">
+          <li><a href="workshops-tilburg.html" class="hover:text-pink-300 cursor-pointer transition-colors">Tilburg & Moergestel</a></li>
+          <li><a href="workshops-nijmegen.html" class="hover:text-pink-300 cursor-pointer transition-colors">Nijmegen</a></li>
+          <li><a href="kinderfeestjes.html" class="hover:text-pink-300 cursor-pointer transition-colors">Kinderfeestjes</a></li>
+          <li><a href="diy-pakketten.html" class="hover:text-pink-300 cursor-pointer transition-colors">DIY Pakketten</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold text-green-400 mb-4" style="font-family: Fredoka, sans-serif;">Info</h4>
+        <ul class="space-y-2 text-gray-400 text-sm">
+          <li><a href="over-ons.html" class="hover:text-green-300 cursor-pointer transition-colors">Over Ons</a></li>
+          <li><a href="locaties.html" class="hover:text-green-300 cursor-pointer transition-colors">Locaties</a></li>
+          <li><a href="contact.html" class="hover:text-green-300 cursor-pointer transition-colors">Contact</a></li>
+          <li><a href="algemene-voorwaarden.html" class="hover:text-green-300 cursor-pointer transition-colors">Algemene Voorwaarden</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold text-pink-400 mb-4" style="font-family: Fredoka, sans-serif;">Contact</h4>
+        <p class="text-gray-400 text-sm mb-2">Locaties: Tilburg, Moergestel & Nijmegen</p>
+        <p class="text-gray-400 text-sm mb-4">7 dagen per week bereikbaar</p>
+        <a href="contact.html" class="clay-btn bg-gradient-to-r from-pink-400 to-pink-500 text-white px-5 py-2 text-sm font-semibold cursor-pointer inline-block">Stuur een berichtje</a>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto border-t border-gray-700 mt-8 pt-8 text-center text-gray-500 text-sm">
+      © 2025 Silsplace · Gebouwd door <a href="https://www.code-lieshout.nl" class="text-pink-400 hover:text-pink-300 cursor-pointer">Code Lieshout</a>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Workshop foto" />
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('open');
+    }
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.add('open');
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+    }
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+</body>
+</html>

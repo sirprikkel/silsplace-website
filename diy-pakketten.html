@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DIY Pakketten – Silsplace</title>
+  <meta name="description" content="DIY doe-het-zelf pakketten voor taarten, bonbons, chocolade en kids. Ophalen in Moergestel of laten bezorgen!" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script defer src="https://analytics.code-lieshout.nl/script.js" data-website-id="8aaaf667-b800-446d-b29a-887f687d537a"></script>
+  <style>
+    body { font-family: 'Nunito', sans-serif; background-color: #FFF9FB; }
+    h1,h2,h3,h4 { font-family: 'Fredoka', sans-serif; }
+    .clay-card { border-radius: 20px; border: 3px solid rgba(244,114,182,0.2); box-shadow: 4px 4px 8px rgba(244,114,182,0.15), inset -2px -2px 8px rgba(255,255,255,0.6); background: white; transition: transform 200ms ease-out; }
+    .clay-card:hover { transform: translateY(-4px); }
+    .clay-btn { border-radius: 16px; box-shadow: 4px 4px 8px rgba(244,114,182,0.25); transition: transform 200ms ease-out; }
+    .clay-btn:hover { transform: translateY(-2px); }
+    #mobile-menu { display: none; }
+    #mobile-menu.open { display: flex; }
+  </style>
+</head>
+<body>
+  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b-2 border-pink-100 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="cursor-pointer"><img src="images/logo.jpg" alt="Silsplace" class="h-12 w-auto rounded-xl" /></a>
+      <div class="hidden md:flex items-center gap-6 font-semibold text-gray-700">
+        <a href="workshops-tilburg.html" class="hover:text-pink-500 cursor-pointer">Workshops Tilburg</a>
+        <a href="workshops-nijmegen.html" class="hover:text-pink-500 cursor-pointer">Workshops Nijmegen</a>
+        <a href="kinderfeestjes.html" class="hover:text-pink-500 cursor-pointer">Kinderfeestjes</a>
+        <a href="diy-pakketten.html" class="text-pink-500 cursor-pointer">DIY Pakketten</a>
+        <a href="over-ons.html" class="hover:text-pink-500 cursor-pointer">Over Ons</a>
+        <a href="locaties.html" class="hover:text-pink-500 cursor-pointer">Locaties</a>
+        <a href="contact.html" class="clay-btn bg-gradient-to-r from-pink-400 to-pink-500 text-white px-5 py-2 cursor-pointer">Contact</a>
+      </div>
+      <button onclick="document.getElementById('mobile-menu').classList.toggle('open')" class="md:hidden cursor-pointer p-2 rounded-xl hover:bg-pink-50">
+        <svg class="w-6 h-6 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="md:hidden flex-col bg-white border-t border-pink-100 px-4 pb-4 gap-3">
+      <a href="workshops-tilburg.html" class="block py-2 text-gray-700 hover:text-pink-500 cursor-pointer">Workshops Tilburg</a>
+      <a href="diy-pakketten.html" class="block py-2 text-pink-500 cursor-pointer">DIY Pakketten</a>
+      <a href="contact.html" class="block mt-2 clay-btn bg-gradient-to-r from-pink-400 to-pink-500 text-white px-5 py-2 text-center cursor-pointer">Contact</a>
+    </div>
+  </nav>
+
+  <section class="py-20 px-4 bg-gradient-to-br from-pink-50 to-green-50 text-center">
+    <div class="max-w-4xl mx-auto">
+      <div class="inline-block bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">Gestart in 2020</div>
+      <h1 class="text-5xl font-bold text-gray-800 mb-6">DIY Doe-het-zelf Pakketten</h1>
+      <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">Woon je te ver weg of wil je thuis aan de slag? Bestel een compleet pakket inclusief alle materialen en een duidelijke beschrijving of instructiefilm!</p>
+      <div class="flex flex-wrap gap-3 justify-center text-sm font-semibold">
+        <span class="bg-pink-100 text-pink-700 px-4 py-2 rounded-full">✓ Alles compleet</span>
+        <span class="bg-green-100 text-green-700 px-4 py-2 rounded-full">✓ Geen oven nodig</span>
+        <span class="bg-pink-100 text-pink-700 px-4 py-2 rounded-full">✓ Ophalen of bezorgen</span>
+        <span class="bg-green-100 text-green-700 px-4 py-2 rounded-full">✓ Inclusief instructie</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 px-4">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-gray-800 mb-4 text-center">🎂 Taarten & Chocolade DIY Pakketten</h2>
+      <p class="text-center text-gray-500 mb-10">Inclusief beschrijving of instructiefilm — geen oven nodig!</p>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="clay-card p-6 text-center">
+          <div class="text-5xl mb-4">🎂</div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">DIY Fondant Taartje</h3>
+          <p class="text-gray-600 text-sm mb-4">Maak zelf een fondant taartje! Compleet pakket inclusief alle materialen en instructie.</p>
+          <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">Beschikbaar</span>
+        </div>
+        <div class="clay-card p-6 text-center">
+          <div class="text-5xl mb-4">🍭</div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">DIY Candy Dripped Cake</h3>
+          <p class="text-gray-600 text-sm mb-4">Kleurrijke candy drip cake zelf maken. Superpopulair cadeau!</p>
+          <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-xs font-semibold">Uitverkocht</span>
+        </div>
+        <div class="clay-card p-6 text-center">
+          <div class="text-5xl mb-4">🌸</div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">DIY Flower Dripped Cake</h3>
+          <p class="text-gray-600 text-sm mb-4">Prachtige bloemen drip cake zelf maken.</p>
+          <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-xs font-semibold">Uitverkocht</span>
+        </div>
+        <div class="clay-card p-6 text-center">
+          <div class="text-5xl mb-4">🦄</div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">DIY Unicorn Cake</h3>
+          <p class="text-gray-600 text-sm mb-4">Maak je eigen betoverende unicorn taart thuis!</p>
+          <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-xs font-semibold">Uitverkocht</span>
+        </div>
+        <div class="clay-card p-6 text-center">
+          <div class="text-5xl mb-4">🍡</div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">DIY Cakepops</h3>
+          <p class="text-gray-600 text-sm mb-4">Leuke en heerlijke cakepops maken — compleet pakket thuis!</p>
+          <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">Beschikbaar</span>
+        </div>
+        <div class="clay-card p-6 text-center">
+          <div class="text-5xl mb-4">🍫</div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">DIY Choco Bonbons</h3>
+          <p class="text-gray-600 text-sm mb-4">Zelf chocolade bonbons maken — alle materialen inclusief!</p>
+          <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">Beschikbaar</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 px-4 bg-gradient-to-br from-green-50 to-pink-50">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-gray-800 mb-4 text-center">🎉 Kids DIY Pakketten</h2>
+      <p class="text-center text-gray-500 mb-10">Compleet met alle materialen en duidelijke instructie — perfect als cadeau of kinderfeestje!</p>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="clay-card p-8">
+          <div class="text-5xl mb-4">👧</div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-3">Kids DIY Pakketten</h3>
+          <p class="text-gray-600 mb-4">Compleet pakket voor kinderen om thuis mee aan de slag te gaan. Inclusief alle materialen en een super duidelijke instructie. Leuk voor verjaardag, slecht-weer-dag of als cadeau!</p>
+          <ul class="text-gray-600 text-sm space-y-2 mb-6">
+            <li class="flex items-center gap-2"><span class="text-pink-400">✓</span> Compleet met alle materialen</li>
+            <li class="flex items-center gap-2"><span class="text-pink-400">✓</span> Duidelijke instructie</li>
+            <li class="flex items-center gap-2"><span class="text-pink-400">✓</span> Ophalen in Moergestel of bezorgen</li>
+            <li class="flex items-center gap-2"><span class="text-pink-400">✓</span> Leuk als cadeau (met persoonlijke boodschap)</li>
+          </ul>
+          <a href="contact.html" class="clay-btn bg-gradient-to-r from-pink-400 to-pink-500 text-white px-6 py-3 font-bold cursor-pointer inline-block">Bestel / vraag info aan</a>
+        </div>
+        <div class="clay-card p-8 bg-pink-50">
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Handig om te weten</h3>
+          <ul class="space-y-4 text-gray-600">
+            <li class="flex items-start gap-3">
+              <div class="w-8 h-8 bg-pink-400 rounded-full flex items-center justify-center flex-shrink-0"><svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg></div>
+              <div><strong>Levertijd:</strong> Maximaal 2-5 werkdagen. Eerder nodig? Overleg met ons!</div>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="w-8 h-8 bg-green-400 rounded-full flex items-center justify-center flex-shrink-0"><svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg></div>
+              <div><strong>Bezorgen:</strong> Pakketkosten €6,75 · Brievenbuspost €3,85</div>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="w-8 h-8 bg-pink-400 rounded-full flex items-center justify-center flex-shrink-0"><svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg></div>
+              <div><strong>Cadeau:</strong> Voeg een persoonlijke boodschap toe in het bestelproces</div>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="w-8 h-8 bg-green-400 rounded-full flex items-center justify-center flex-shrink-0"><svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg></div>
+              <div><strong>Grote bestelling?</strong> Voor PV of bedrijf kunnen we ook een Excel-lijst verwerken</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 px-4 text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-4xl font-bold text-gray-800 mb-4">Bestellen of vragen?</h2>
+      <p class="text-xl text-gray-600 mb-8">Stuur ons een berichtje en we sturen je alle info over beschikbaarheid en prijzen!</p>
+      <a href="contact.html" class="clay-btn bg-gradient-to-r from-pink-400 to-pink-500 text-white px-10 py-5 text-xl font-bold cursor-pointer inline-block">Neem contact op</a>
+    </div>
+  </section>
+
+  <footer class="bg-gray-800 text-white py-12 px-4">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-8">
+      <div><img src="images/logo.jpg" alt="Silsplace" class="h-12 w-auto rounded-xl mb-4" /><p class="text-gray-400 text-sm">Workshops & DIY pakketten.</p></div>
+      <div><h4 class="font-bold text-pink-400 mb-4" style="font-family:Fredoka,sans-serif;">Workshops</h4><ul class="space-y-2 text-gray-400 text-sm"><li><a href="workshops-tilburg.html" class="hover:text-pink-300 cursor-pointer">Tilburg & Moergestel</a></li><li><a href="workshops-nijmegen.html" class="hover:text-pink-300 cursor-pointer">Nijmegen</a></li><li><a href="kinderfeestjes.html" class="hover:text-pink-300 cursor-pointer">Kinderfeestjes</a></li><li><a href="diy-pakketten.html" class="hover:text-pink-300 cursor-pointer">DIY Pakketten</a></li></ul></div>
+      <div><h4 class="font-bold text-green-400 mb-4" style="font-family:Fredoka,sans-serif;">Info</h4><ul class="space-y-2 text-gray-400 text-sm"><li><a href="over-ons.html" class="hover:text-green-300 cursor-pointer">Over Ons</a></li><li><a href="locaties.html" class="hover:text-green-300 cursor-pointer">Locaties</a></li><li><a href="contact.html" class="hover:text-green-300 cursor-pointer">Contact</a></li></ul></div>
+      <div><h4 class="font-bold text-pink-400 mb-4" style="font-family:Fredoka,sans-serif;">Contact</h4><a href="contact.html" class="clay-btn bg-gradient-to-r from-pink-400 to-pink-500 text-white px-5 py-2 text-sm font-semibold cursor-pointer inline-block">Stuur een berichtje</a></div>
+    </div>
+    <div class="max-w-6xl mx-auto border-t border-gray-700 mt-8 pt-8 text-center text-gray-500 text-sm">© 2025 Silsplace · Gebouwd door <a href="https://www.code-lieshout.nl" class="text-pink-400 hover:text-pink-300 cursor-pointer">Code Lieshout</a></div>
+  </footer>
+</body>
+</html>

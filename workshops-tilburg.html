@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workshops Tilburg & Moergestel – Silsplace</title>
+  <meta name="description" content="Gezellige workshops in Tilburg en Moergestel. Taarten, bonbons, high tea, sushi en creatieve workshops. Voor vrijgezellenfeest, vriendinnendag of teamuitje!" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { roze: '#F472B6', 'roze-licht': '#FDF2F8', groen: '#4ADE80', 'groen-licht': '#F0FDF4', creme: '#FFF9FB' },
+          fontFamily: { heading: ['Fredoka', 'sans-serif'], body: ['Nunito', 'sans-serif'] },
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script defer src="https://analytics.code-lieshout.nl/script.js" data-website-id="8aaaf667-b800-446d-b29a-887f687d537a"></script>
+  <style>
+    body { font-family: 'Nunito', sans-serif; background-color: #FFF9FB; }
+    h1, h2, h3, h4 { font-family: 'Fredoka', sans-serif; }
+    .clay-card { border-radius: 20px; border: 3px solid rgba(244,114,182,0.2); box-shadow: 4px 4px 8px rgba(244,114,182,0.15), inset -2px -2px 8px rgba(255,255,255,0.6); background: white; transition: transform 200ms ease-out, box-shadow 200ms ease-out; }
+    .clay-card:hover { transform: translateY(-4px); box-shadow: 6px 8px 16px rgba(244,114,182,0.25); }
+    .clay-btn { border-radius: 16px; box-shadow: 4px 4px 8px rgba(244,114,182,0.25); transition: transform 200ms ease-out; }
+    .clay-btn:hover { transform: translateY(-2px); }
+    #mobile-menu { display: none; }
+    #mobile-menu.open { display: flex; }
+    #lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.8); z-index: 1000; align-items: center; justify-content: center; }
+    #lightbox.open { display: flex; }
+    #lightbox img { max-width: 90vw; max-height: 90vh; border-radius: 20px; }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b-2 border-pink-100 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="cursor-pointer"><img src="images/logo.jpg" alt="Silsplace" class="h-12 w-auto rounded-xl" /></a>
+      <div class="hidden md:flex items-center gap-6 font-semibold text-gray-700">
+        <a href="workshops-tilburg.html" class="text-pink-500 cursor-pointer">Workshops Tilburg</a>
+        <a href="workshops-nijmegen.html" class="hover:text-pink-500 transition-colors cursor-pointer">Workshops Nijmegen</a>
+        <a href="kinderfeestjes.html" class="hover:text-pink-500 transition-colors cursor-pointer">Kinderfeestjes</a>
+        <a href="diy-pakketten.html" class="hover:text-pink-500 transition-colors cursor-pointer">DIY Pakketten</a>
+        <a href="over-ons.html" class="hover:text-pink-500 transition-colors cursor-pointer">Over Ons</a>
+        <a href="locaties.html" class="hover:text-pink-500 transition-colors cursor-pointer">Locaties</a>
+        <a href="contact.html" class="clay-btn bg-gradient-to-r from-pink-400 to-pink-500 text-white px-5 py-2 cursor-pointer">Contact</a>
+      </div>
+      <button onclick="document.getElementById('mobile-menu').classList.toggle('open')" class="md:hidden cursor-pointer p-2 rounded-xl hover:bg-pink-50">
+        <svg class="w-6 h-6 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="md:hidden flex-col bg-white border-t border-pink-100 px-4 pb-4 gap-3">
+      <a href="workshops-tilburg.html" class="block py-2 text-pink-500 cursor-pointer">Workshops Tilburg</a>
+      <a href="workshops-nijmegen.html" class="block py-2 text-gray-700 hover:text-pink-500 cursor-pointer">Workshops Nijmegen</a>
+      <a href="kinderfeestjes.html" class="block py-2 text-gray-700 hover:text-pink-500 cursor-pointer">Kinderfeestjes</a>
+      <a href="diy-pakketten.html" class="block py-2 text-gray-700 hover:text-pink-500 cursor-pointer">DIY Pakketten</a>
+      <a href="over-ons.html" class="block py-2 text-gray-700 hover:text-pink-500 cursor-pointer">Over Ons</a>
+      <a href="locaties.html" class="block py-2 text-gray-700 hover:text-pink-500 cursor-pointer">Locaties</a>
+      <a href="contact.html" class="block mt-2 clay-btn bg-gradient-to-r from-pink-400 to-pink-500 text-white px-5 py-2 text-center cursor-pointer">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="py-20 px-4 bg-gradient-to-br from-pink-50 to-white text-center">
+    <div class="max-w-4xl mx-auto">
+      <div class="inline-block bg-pink-100 text-pink-600 px-4 py-2 rounded-full text-sm font-semibold mb-6">Tilburg & Moergestel</div>
+      <h1 class="text-5xl font-bold text-gray-800 mb-6">Workshops Tilburg</h1>
+      <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+        Creatieve en culinaire workshops in Tilburg en Moergestel. Van vrijgezellenfeest tot personeelsuitje, vriendinnendag of babyshower. Incl. onbeperkt consumpties & lekkers!
+      </p>
+      <div class="flex flex-wrap gap-3 justify-center text-sm font-semibold text-gray-600">
+        <span class="bg-pink-100 px-4 py-2 rounded-full">✓ Gratis parkeren</span>
+        <span class="bg-green-100 px-4 py-2 rounded-full">✓ Incl. consumpties</span>
+        <span class="bg-pink-100 px-4 py-2 rounded-full">✓ Vanaf 6 personen</span>
+        <span class="bg-green-100 px-4 py-2 rounded-full">✓ 7 dagen p/week</span>
+        <span class="bg-pink-100 px-4 py-2 rounded-full">✓ Elke zaterdag inloop</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TAARTEN & BONBONS -->
+  <section id="taarten" class="py-16 px-4">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-gray-800 mb-10 text-center">🎂 Taarten & Bonbon Workshops</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <div class="clay-card overflow-hidden">
+          <img src="images/nijmegen5.png" alt="Taartenworkshop" class="w-full h-48 object-cover" />
+          <div class="p-6">
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Taarten Decoreren</h3>
+            <p class="text-gray-600 text-sm mb-4">Iedereen krijgt een GROTE ronde taart. We snijden hem in lagen, vullen met botercrème, bekleden met fondant en versieren. Je gaat naar huis met een prachtige taart die ook 3 maanden in de vriezer kan!</p>
+            <div class="bg-pink-50 rounded-xl p-4 mb-4">
+              <div class="flex justify-between text-sm">
+                <span class="font-semibold text-pink-600">€37,50 p.p.</span>
+                <span class="text-gray-500">2,5 uur</span>
+              </div>
+              <p class="text-xs text-gray-500 mt-1">Incl. alle materialen, koffie/thee/fris & lekkers</p>
+            </div>
+            <p class="text-xs text-gray-500">Ook als "Heel Holland Bakt" thema mogelijk bij grotere groepen!</p>
+          </div>
+        </div>
+
+        <div class="clay-card overflow-hidden">
+          <img src="images/nijmegen6.png" alt="Stapeltaart workshop" class="w-full h-48 object-cover" />
+          <div class="p-6">
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Stapeltaart Workshop</h3>
+            <p class="text-gray-600 text-sm mb-4">Verdiep je kennis verder! We leren bekleden, decoreren, kroontjes, roosjes, randen maken — en dan is het stapelen geblazen. Je gaat naar huis met een 2-laags stapeltaart met kroon!</p>
+            <div class="bg-pink-50 rounded-xl p-4 mb-4">
+              <div class="flex justify-between text-sm">
+                <span class="font-semibold text-pink-600">€80,- p.p.</span>
+                <span class="text-gray-500">3,5 uur</span>
+              </div>
+            </div>
+            <p class="text-xs text-gray-500">Ook mogelijk met piepschuim taart ipv echte cake.</p>
+          </div>
+        </div>
+
+        <div class="clay-card overflow-hidden">
+          <img src="images/nijmegen7.png" alt="Bonbons workshop" class="w-full h-48 object-cover" />
+          <div class="p-6">
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Bonbons Maken</h3>
+            <p class="text-gray-600 text-sm mb-4">Chocolade tekening maken, bonbon-cupjes vullen met allerlei vullingen, marsepein/fudge bonbons maken en daarna prachtig versieren met parels, sprinkles en glitters!</p>
+            <div class="bg-pink-50 rounded-xl p-4 mb-4">
+              <div class="flex justify-between text-sm">
+                <span class="font-semibold text-pink-600">€42,50 p.p.</span>
+                <span class="text-gray-500">2 uur</span>
+              </div>
+              <p class="text-xs text-gray-500 mt-1">Incl. alle materialen, consumpties & lekkers</p>
+            </div>
+            <p class="text-xs text-gray-500">Ook als Chocolate Shoe workshop (€45,-) of erotische versie!</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- KOOKWORKSHOPS -->
+  <section id="koken" class="py-16 px-4 bg-gradient-to-br from-green-50 to-white">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-gray-800 mb-10 text-center">🍣 Kookworkshops</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+
+        <div class="clay-card overflow-hidden">
+          <img src="images/nijmegen8.png" alt="High tea workshop" class="w-full h-52 object-cover" />
+          <div class="p-6">
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">High Tea Workshop</h3>
+            <p class="text-gray-600 mb-4">We beginnen met een glaasje prosecco en maken diverse hartige taarten, quiches, bonbons, amuse-lepels, filodeegbakjes, cake-pops en luxe sandwiches. Alles wordt op etagères mooi geserveerd. Maaltijdvullend!</p>
+            <div class="grid grid-cols-2 gap-4 bg-green-50 rounded-xl p-4 mb-4">
+              <div>
+                <div class="font-bold text-green-600 text-lg">€49,50 p.p.</div>
+                <div class="text-xs text-gray-500">3 uur</div>
+              </div>
+              <div>
+                <div class="text-sm text-gray-600">Incl. prosecco</div>
+                <div class="text-xs text-gray-500">Max. 9 personen</div>
+              </div>
+            </div>
+            <p class="text-xs text-gray-500">Locatie: Moergestel (6-9 personen) · Receptenboekje na afloop via mail</p>
+          </div>
+        </div>
+
+        <div class="clay-card overflow-hidden">
+          <img src="images/nijmegen1.png" alt="Sushi workshop" class="w-full h-52 object-cover" />
+          <div class="p-6">
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Sushi Workshop</h3>
+            <p class="text-gray-600 mb-4">Leer maki-rollen, Nigiri, Uramaki én fruit-sushi maken. Ook sushi met vlees en vegetarisch. Na afloop dek je samen de tafel en eet je alles gezellig op met stokjes, sojasaus en wasabi.</p>
+            <div class="grid grid-cols-2 gap-4 bg-green-50 rounded-xl p-4 mb-4">
+              <div>
+                <div class="font-bold text-green-600 text-lg">€59,- p.p.</div>
+                <div class="text-xs text-gray-500">3 uur</div>
+              </div>
+              <div>
+                <div class="text-sm text-gray-600">Incl. sake, wijn & bier</div>
+                <div class="text-xs text-gray-500">6-9 personen</div>
+              </div>
+            </div>
+            <p class="text-xs text-gray-500">Locatie: Moergestel · Receptenboekje na afloop via mail</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CREATIEVE WORKSHOPS -->
+  <section id="creatief" class="py-16 px-4">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-gray-800 mb-4 text-center">🎨 Creatieve Workshops</h2>
+      <p class="text-center text-gray-500 mb-10">Voor iedereen — ook als je denkt dat je niet handig bent!</p>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+        <div class="clay-card p-5 text-center cursor-pointer" onclick="location.href='contact.html'">
+          <img src="images/img4.png" alt="Ibiza tassen" class="w-full h-32 object-cover rounded-xl mb-3" />
+          <h4 class="font-bold text-gray-800">Ibiza Tassen</h4>
+          <p class="text-xs text-gray-500 mt-1">Pim je eigen tas!</p>
+        </div>
+        <div class="clay-card p-5 text-center cursor-pointer" onclick="location.href='contact.html'">
+          <img src="images/img5.png" alt="Droogbloemen krans" class="w-full h-32 object-cover rounded-xl mb-3" />
+          <h4 class="font-bold text-gray-800">Droogbloemen Krans</h4>
+          <p class="text-xs text-gray-500 mt-1">Prachtige wanddecoratie</p>
+        </div>
+        <div class="clay-card p-5 text-center cursor-pointer" onclick="location.href='contact.html'">
+          <img src="images/img6.png" alt="Wandcirkels" class="w-full h-32 object-cover rounded-xl mb-3" />
+          <h4 class="font-bold text-gray-800">Wandcirkels Maken</h4>
+          <p class="text-xs text-gray-500 mt-1">Unieke wanddecoratie</p>
+        </div>
+        <div class="clay-card p-5 text-center cursor-pointer" onclick="location.href='contact.html'">
+          <img src="images/img7.png" alt="Dikke dames" class="w-full h-32 object-cover rounded-xl mb-3" />
+          <h4 class="font-bold text-gray-800">Dikke Dames</h4>
+          <p class="text-xs text-gray-500 mt-1">Beeldjes & schilderen</p>
+        </div>
+        <div class="clay-card p-5 text-center cursor-pointer" onclick="location.href='contact.html'">
+          <img src="images/img8.png" alt="Mozaieken" class="w-full h-32 object-cover rounded-xl mb-3" />
+          <h4 class="font-bold text-gray-800">Mozaieken</h4>
+          <p class="text-xs text-gray-500 mt-1">Kleurrijke tegeltjes</p>
+        </div>
+        <div class="clay-card p-5 text-center cursor-pointer" onclick="location.href='contact.html'">
+          <img src="images/img9.png" alt="Etagères schilderen" class="w-full h-32 object-cover rounded-xl mb-3" />
+          <h4 class="font-bold text-gray-800">Etagères Schilderen</h4>
+          <p class="text-xs text-gray-500 mt-1">Geef je servies een upgrade</p>
+        </div>
+        <div class="clay-card p-5 text-center cursor-pointer" onclick="location.href='contact.html'">
+          <img src="images/img10.png" alt="Stippen" class="w-full h-32 object-cover rounded-xl mb-3" />
+          <h4 class="font-bold text-gray-800">Stippen Workshop</h4>
+          <p class="text-xs text-gray-500 mt-1">Dot painting & mandala</p>
+        </div>
+        <div class="clay-card p-5 text-center cursor-pointer" onclick="location.href='contact.html'">
+          <img src="images/img11.png" alt="Kerst workshops" class="w-full h-32 object-cover rounded-xl mb-3" />
+          <h4 class="font-bold text-gray-800">Seizoens Workshops</h4>
+          <p class="text-xs text-gray-500 mt-1">Herfst, kerst, pasen</p>
+        </div>
+      </div>
+      <div class="text-center mt-8">
+        <a href="contact.html" class="clay-btn bg-gradient-to-r from-pink-400 to-pink-500 text-white px-8 py-4 font-bold cursor-pointer inline-block">Vraag meer info aan</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INLOOPWORKSHOPS -->
+  <section class="py-16 px-4 bg-gradient-to-r from-pink-400 to-pink-600 text-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-4">Elke zaterdag: Inloopworkshops!</h2>
+      <p class="text-xl opacity-90 mb-6">Niet met een eigen groepje? Sluit je dan aan bij onze gezellige inloopworkshops in Tilburg/Moergestel. Je kunt gerust alleen komen of je vriendin verrassen!</p>
+      <a href="contact.html" class="clay-btn bg-white text-pink-500 px-8 py-4 font-bold text-lg cursor-pointer inline-block">Bekijk de agenda</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-800 text-white py-12 px-4">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-8">
+      <div>
+        <img src="images/logo.jpg" alt="Silsplace" class="h-12 w-auto rounded-xl mb-4" />
+        <p class="text-gray-400 text-sm">Workshops in Tilburg, Moergestel & Nijmegen. Gestart 2006.</p>
+      </div>
+      <div>
+        <h4 class="font-bold text-pink-400 mb-4" style="font-family: Fredoka, sans-serif;">Workshops</h4>
+        <ul class="space-y-2 text-gray-400 text-sm">
+          <li><a href="workshops-tilburg.html" class="hover:text-pink-300 cursor-pointer transition-colors">Tilburg & Moergestel</a></li>
+          <li><a href="workshops-nijmegen.html" class="hover:text-pink-300 cursor-pointer transition-colors">Nijmegen</a></li>
+          <li><a href="kinderfeestjes.html" class="hover:text-pink-300 cursor-pointer transition-colors">Kinderfeestjes</a></li>
+          <li><a href="diy-pakketten.html" class="hover:text-pink-300 cursor-pointer transition-colors">DIY Pakketten</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold text-green-400 mb-4" style="font-family: Fredoka, sans-serif;">Info</h4>
+        <ul class="space-y-2 text-gray-400 text-sm">
+          <li><a href="over-ons.html" class="hover:text-green-300 cursor-pointer transition-colors">Over Ons</a></li>
+          <li><a href="locaties.html" class="hover:text-green-300 cursor-pointer transition-colors">Locaties</a></li>
+          <li><a href="contact.html" class="hover:text-green-300 cursor-pointer transition-colors">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold text-pink-400 mb-4" style="font-family: Fredoka, sans-serif;">Contact</h4>
+        <p class="text-gray-400 text-sm mb-4">7 dagen per week beschikbaar</p>
+        <a href="contact.html" class="clay-btn bg-gradient-to-r from-pink-400 to-pink-500 text-white px-5 py-2 text-sm font-semibold cursor-pointer inline-block">Stuur een berichtje</a>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto border-t border-gray-700 mt-8 pt-8 text-center text-gray-500 text-sm">
+      © 2025 Silsplace · Gebouwd door <a href="https://www.code-lieshout.nl" class="text-pink-400 hover:text-pink-300 cursor-pointer">Code Lieshout</a>
+    </div>
+  </footer>
+  <div id="lightbox" onclick="document.getElementById('lightbox').classList.remove('open')"><img id="lightbox-img" src="" alt="" /></div>
+  <script>document.addEventListener('keydown',(e)=>{if(e.key==='Escape')document.getElementById('lightbox').classList.remove('open')});</script>
+</body>
+</html>
